@@ -4,17 +4,14 @@
 
 int main(){
 
-    int min, sec = 0;
-
-    int go_sch1, go_sch2, go_sch3, go_sch4 = 0;
-
-    scanf("%d %d %d %d", &go_sch1, &go_sch2, &go_sch3, &go_sch4);
-
-    min = go_sch1 + go_sch2 + go_sch3 + go_sch4;
-
+    int min, sec, total = 0;
+	
+	for(int i = 0; i < 4; i++){
+		scanf("%d", &total);
+		min += total;
+	}
     sec = min % 60;
     min = min / 60;
-
     printf("%d\n%d\n", min, sec);
 
     return 0;
